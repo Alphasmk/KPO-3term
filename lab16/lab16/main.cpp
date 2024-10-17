@@ -167,7 +167,7 @@ int _tmain(int argc, _TCHAR* argv[])
     }
 
     FST::FST fst8(
-        "abbdclf",
+        "Mabbdclf",
         9,
 
         FST::NODE(1, FST::RELATION('a', 1)),

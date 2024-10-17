@@ -27,13 +27,13 @@ namespace FST
 
     struct FST
     {
-        const char* string;
+        std::string string;
         short position;
         short nstates;
         NODE* nodes;
         short* rstates;
         FST(
-            const char* s,
+            std::string s,
             short ns,
             NODE n, ...
         );

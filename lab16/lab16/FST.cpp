@@ -1,8 +1,5 @@
 #include "FST.h"
-#include <iostream>
-#include <string>
-#include <cstdarg>  // Для работы с variadic arguments
-
+#include <stdarg.h>
 namespace FST
 {
     RELATION::RELATION(char c, short nn)
@@ -32,7 +29,7 @@ namespace FST
         va_end(args);
     }
 
-    FST::FST(const char* s, short ns, NODE n, ...)
+    FST::FST(std::string s, short ns, NODE n, ...)
     {
         string = s;
         nstates = ns;
@@ -86,7 +83,7 @@ namespace FST
     {
         short* rstates = new short[fst.nstates];
         memset(rstates, 0xff, sizeof(short) * fst.nstates);
-        short lstring = strlen(fst.string);
+        short lstring = fst.string.length();
         bool rc = true;
 
         for (short i = 0; i < lstring && rc; i++)
