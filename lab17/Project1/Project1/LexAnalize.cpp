@@ -641,5 +641,4 @@ namespace LA
 			std::cout << "\n\n";
 		}
 	}
-}
-	
+}	
